@@ -1,0 +1,29 @@
+.container {
+    background-color: var(--color-grey-light-2);
+    box-shadow: --var(--shadow-dark);
+    margin: 8rem auto;
+    max-width: 120rem;
+
+    // TEMPORARY
+    min-height: 50rem;
+}
+
+.header {
+    background-color: #fff;
+    border-bottom: 1px solid var(--color-grey-light-2);
+    height: 7rem;
+}
+
+.content {
+    display: flex; // this div holds the flex items.
+}
+
+.sidebar {
+    background-color: var(--color-grey-dark-1);
+    flex: 0 0 18%; // flex grow, flex shrink, flex basis.
+}
+
+.hotel-view {
+    background-color: #fff;
+    flex: 1; // flex grow allowed to fill up the rest of the width.
+}
