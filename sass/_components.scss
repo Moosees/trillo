@@ -4,17 +4,61 @@
 *****************/
 .logo {
     height: 3.25rem;
+    margin-left: 3rem;
 }
 
 /*****************
       SEARCG
 *****************/
 .search {
-    &__input {}
+    align-items: center;
+    display: flex; // flexitems can also be flexboxes.
+    flex: 0 0 40%;
+    justify-content: center;
 
-    &__button {}
+    &__input {
+        background-color: var(--color-grey-light-2);
+        border: none;
+        border-radius: 100px; // high numer for rounded edges.
+        color: inherit;
+        font-family: inherit;
+        font-size: inherit; // no inherited on input as default.
+        margin-right: -3.25rem; // space for the icon inside the input.
+        padding: .7rem 2rem;
+        transition: all .2s;
+        width: 90%;
+
+        &:focus {
+            background-color: var(--color-grey-light-3);
+            outline: none;
+            width: 100%;
+        }
+
+        &::-webkit-input-placeholder { // input text
+            color: var(--color-grey-light-4);
+            font-weight: 100;
+        }
+    }
+
+    &__input:focus + &__button { // sibling selector
+        background-color: var(--color-grey-light-3);
+    }
+
+    &__button {
+        background-color: var(--color-grey-light-2);
+        border: none;
+
+        &:focus {
+            outline:none;
+        }
+
+        &:active {
+            transform: translateY(2px); // click down button effect.
+        }
+    }
 
     &__icon {
+        fill: var(--color-grey-dark-3); // fill instead of color for SVGs.
         height: 2rem; // SVG icons can be easily resized with height and width.
         width: 2rem;
     }

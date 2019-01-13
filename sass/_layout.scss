@@ -9,9 +9,13 @@
 }
 
 .header {
+    align-items: center; // vertical (cross-axis) alignment.
     background-color: #fff;
     border-bottom: 1px solid var(--color-grey-light-2);
+    display: flex;
+    font-size: 1.4rem;
     height: 7rem;
+    justify-content: space-between; // all the spece is between the flex items, no space on sides.
 }
 
 .content {
