@@ -48,7 +48,7 @@ body {
 }
 
 /*****************
-      SEARCG
+     SEARCH
 *****************/
 .search {
   align-items: center;
@@ -142,12 +142,29 @@ body {
   margin-right: 1rem;
 }
 
+/*****************
+  SIDE NAVIGATION
+*****************/
+.side-nav__icon {
+  height: 1.75rem;
+  width: 1.75rem;
+}
+
+/*****************
+    LEGAL TEXT
+*****************/
+.legal {
+  color: var(--color-grey-light-4);
+  font-size: 1.2rem;
+  padding: 2.5rem;
+  text-align: center;
+}
+
 .container {
   background-color: var(--color-grey-light-2);
   box-shadow: --var(--shadow-dark);
   margin: 8rem auto;
   max-width: 120rem;
-  min-height: 50rem;
 }
 
 .header {
@@ -166,12 +183,16 @@ body {
 
 .sidebar {
   background-color: var(--color-grey-dark-1);
+  display: flex;
   flex: 0 0 18%;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .hotel-view {
   background-color: #fff;
   flex: 1;
+  min-height: 80rem;
 }
 
 /*# sourceMappingURL=style.css.map */
