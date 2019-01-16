@@ -8,7 +8,7 @@
 }
 
 /*****************
-      SEARCG
+     SEARCH
 *****************/
 .search {
     align-items: center;
@@ -114,4 +114,74 @@
         height: 3.75rem;
         margin-right: 1rem;
     }
+}
+
+/*****************
+  SIDE NAVIGATION
+*****************/
+.side-nav {
+    font-size: 1.4rem;
+    list-style: none;
+    margin-top: 3.5rem;
+
+    &__item {
+        position: relative;
+
+        &:not(:last-child) {
+            margin-bottom: .5rem;
+        }
+    }
+
+    &__item::before {
+        background-color: var(--color-primary);
+        content: "";
+        left: 0;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        transform: scaleY(0);
+        transition: transform .2s, 
+                    width .4s cubic-bezier(1,0,0,1) .2s,
+                    background-color .1s; // second value is delay.
+        width: 3px;
+    }
+
+    &__item:hover::before,
+    &__item--active::before {
+        transform: scaleY(1);
+        width: 100%; // works even though both px and % are used.
+    }
+
+    &__item:active::before {
+        background-color: var(--color-primary-light);
+    }
+
+    &__link:link,
+    &__link:visited {
+        align-items: stretch;
+        color: var(--color-grey-light-1);
+        display: flex; // really is flex AND block.
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 1.5rem 3rem;
+        position: relative; // z-index needs specified position!
+        z-index: 10;
+    }
+
+    &__icon {
+        fill: currentColor; // uses the color of the element, or parent element if no color is defined for the element, side-nav__link in this case. Works with pseudoelements and the like.
+        height: 1.75rem;
+        margin-right: 2rem;
+        width: 1.75rem;
+    }
+}
+
+/*****************
+    LEGAL TEXT
+*****************/
+.legal {
+    color: var(--color-grey-light-4);
+    font-size: 1.2rem;
+    padding: 2.5rem;
+    text-align: center;
 }

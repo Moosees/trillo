@@ -3,9 +3,6 @@
     box-shadow: --var(--shadow-dark);
     margin: 8rem auto;
     max-width: 120rem;
-
-    // TEMPORARY
-    min-height: 50rem;
 }
 
 .header {
@@ -24,10 +21,16 @@
 
 .sidebar {
     background-color: var(--color-grey-dark-1);
+    display: flex;
     flex: 0 0 18%; // flex grow, flex shrink, flex basis.
+    flex-direction: column; // main axis is now top to bottom.
+    justify-content: space-between;
 }
 
 .hotel-view {
     background-color: #fff;
     flex: 1; // flex grow allowed to fill up the rest of the width.
+
+    // TEMPORARY
+    min-height: 80rem;
 }
