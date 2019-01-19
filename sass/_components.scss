@@ -230,7 +230,7 @@
 // GALLERY OVERVIEW
 .overview {
   align-items: center;
-  border-bottom: 1px solid var(--color-grey-light-2);
+  border-bottom: var(--line);
   display: flex;
 
   &__heading {
@@ -284,5 +284,64 @@
   &__rating-count {
     font-size: .8rem;
     text-transform: uppercase;
+  }
+}
+
+// PARAGRAPH
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem;
+}
+
+// LIST
+.list {
+  border-bottom: var(--line);
+  border-top: var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 3rem 0;
+  padding: 3rem 0 2.3rem;
+
+  &__item {
+    flex: 0 0 50%;
+    margin-bottom: .7rem;
+  }
+
+  &__item::before {
+    -webkit-mask-image: url(../img/chevron-thin-right.svg); // only shows the background through the mask.
+    -webkit-mask-size: cover;
+    background-color: var(--color-primary);
+    content: '';
+    display: inline-block;
+    height: 1rem;
+    margin-right: .7rem;
+    width: 1rem;
+    // Older browsers
+    // background-image: url(../img/chevron-thin-right.svg);
+    // background-size: cover;
+  }
+}
+
+// RECOMMEND
+.recommend {
+  align-items: center;
+  color: var(--color-grey-dark-3);
+  display: flex;
+  font-size: 1.3rem;
+
+  &__count {
+    margin-right: auto;
+  }
+
+  &__photo {
+    border: 3px solid #fff;
+    border-radius: 50%;
+    box-sizing: content-box; // overrides the base border box default.
+    height: 4rem;
+    width: 4rem;
+
+    &:not(:last-child) {
+      margin-right: -1.5rem;
+    }
   }
 }
