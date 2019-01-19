@@ -1,36 +1,36 @@
 .container {
-    background-color: var(--color-grey-light-2);
-    box-shadow: --var(--shadow-dark);
-    margin: 8rem auto;
-    max-width: 120rem;
+  background-color: var(--color-grey-light-2);
+  box-shadow: var(--shadow-dark);
+  margin: 8rem auto;
+  max-width: 120rem;
 }
 
 .header {
-    align-items: center; // vertical (cross-axis) alignment.
-    background-color: #fff;
-    border-bottom: 1px solid var(--color-grey-light-2);
-    display: flex;
-    font-size: 1.4rem;
-    height: 7rem;
-    justify-content: space-between; // all the spece is between the flex items, no space on sides.
+  align-items: center; // vertical (cross-axis) alignment.
+  background-color: #fff;
+  border-bottom: 1px solid var(--color-grey-light-2);
+  display: flex;
+  font-size: 1.4rem;
+  height: 7rem;
+  justify-content: space-between; // all the spece is between the flex items, no space on sides.
 }
 
 .content {
-    display: flex; // this div holds the flex items.
+  display: flex; // this div holds the flex items.
 }
 
 .sidebar {
-    background-color: var(--color-grey-dark-1);
-    display: flex;
-    flex: 0 0 18%; // flex grow, flex shrink, flex basis.
-    flex-direction: column; // main axis is now top to bottom.
-    justify-content: space-between;
+  background-color: var(--color-grey-dark-1);
+  display: flex;
+  flex: 0 0 18%; // flex grow, flex shrink, flex basis.
+  flex-direction: column; // main axis is now top to bottom.
+  justify-content: space-between;
 }
 
 .hotel-view {
-    background-color: #fff;
-    flex: 1; // flex grow allowed to fill up the rest of the width.
+  background-color: #fff;
+  flex: 1; // flex grow allowed to fill up the rest of the width.
 
-    // TEMPORARY
-    min-height: 80rem;
+  // TEMPORARY
+  min-height: 80rem;
 }
