@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --color-primary: #eb2f64;
   --color-primary-light: #FF3366;
@@ -206,8 +207,15 @@ body {
   padding-bottom: 2px;
   transition: all 0.2s;
 }
+.btn-inline span {
+  margin-left: 3px;
+  transition: margin-left 0.2s;
+}
 .btn-inline:hover {
   color: var(--color-grey-dark-1);
+}
+.btn-inline:hover span {
+  margin-left: 8px;
 }
 .btn-inline:focus {
   animation: pulsate 1s infinite;
@@ -326,6 +334,60 @@ body {
   margin-right: -1.5rem;
 }
 
+.review {
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  margin-bottom: 3rem;
+  overflow: hidden;
+  padding: 3.5rem;
+  position: relative;
+}
+.review__text {
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+}
+.review__user {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.review__photo {
+  border-radius: 50%;
+  height: 4.5rem;
+  margin-right: 1.5rem;
+  width: 4.5rem;
+}
+.review__user-box {
+  margin-right: auto;
+}
+.review__user-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+}
+.review__user-date {
+  color: var(--color-grey-dark-3);
+  font-size: 1rem;
+}
+.review__rating {
+  color: var(--color-primary);
+  font-size: 2.2rem;
+  font-weight: 300;
+}
+.review::before {
+  color: var(--color-grey-light-2);
+  content: "“";
+  font-family: sans-serif;
+  font-size: 20rem;
+  left: -1rem;
+  line-height: 1;
+  position: absolute;
+  top: -2.75rem;
+  z-index: 1;
+}
+
 .container {
   background-color: var(--color-grey-light-2);
   box-shadow: var(--shadow-dark);
@@ -364,6 +426,7 @@ body {
   background-color: var(--color-grey-light-1);
   border-bottom: var(--line);
   display: flex;
+  font-size: 1.4rem;
   padding: 4.5rem;
 }
 
@@ -371,14 +434,15 @@ body {
   background-color: #fff;
   box-shadow: var(--shadow-light);
   flex: 0 0 60%;
-  font-size: 1.4rem;
   margin-right: 4.5rem;
   padding: 3rem;
 }
 
 .user-reviews {
-  background-color: #fff;
+  align-items: center;
+  display: flex;
   flex: 1;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=style.css.map */

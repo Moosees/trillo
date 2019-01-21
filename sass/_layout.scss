@@ -36,6 +36,7 @@
   background-color: var(--color-grey-light-1);
   border-bottom: var(--line);
   display: flex;
+  font-size: 1.4rem;
   padding: 4.5rem;
 }
 
@@ -43,12 +44,13 @@
   background-color: #fff;
   box-shadow: var(--shadow-light);
   flex: 0 0 60%; // no grow or shrink and lets user review adapt to it.
-  font-size: 1.4rem;
   margin-right: 4.5rem;
   padding: 3rem;
 }
 
 .user-reviews {
-  background-color: #fff;
+  align-items: center;
+  display: flex;
   flex: 1; // takes up the rest of the space.
+  flex-direction: column;
 }
