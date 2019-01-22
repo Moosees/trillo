@@ -7,7 +7,7 @@
 
 .header {
   align-items: center; // vertical (cross-axis) alignment.
-  background-color: #fff;
+  background-color: var(--color-white);
   border-bottom: var(--line);
   display: flex;
   font-size: 1.4rem;
@@ -28,7 +28,7 @@
 }
 
 .hotel-view {
-  background-color: #fff;
+  background-color: var(--color-white);
   flex: 1; // flex grow allowed to fill up the rest of the width.
 }
 
@@ -41,7 +41,7 @@
 }
 
 .description {
-  background-color: #fff;
+  background-color: var(--color-white);
   box-shadow: var(--shadow-light);
   flex: 0 0 60%; // no grow or shrink and lets user review adapt to it.
   margin-right: 4.5rem;
