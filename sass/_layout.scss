@@ -3,20 +3,36 @@
   box-shadow: var(--shadow-dark);
   margin: 8rem auto;
   max-width: 120rem;
+
+  @media only screen and (max-width: $bp-largest) {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 .header {
   align-items: center; // vertical (cross-axis) alignment.
-  background-color: #fff;
+  background-color: var(--color-white);
   border-bottom: var(--line);
   display: flex;
   font-size: 1.4rem;
   height: 7rem;
   justify-content: space-between; // all the spece is between the flex items, no space on sides.
+
+  @media only screen and (max-width: $bp-smallest) {
+    align-content: space-around;
+    flex-wrap: wrap;
+    height: 10rem;
+  }
 }
 
 .content {
   display: flex; // this div holds the flex items.
+
+  @media only screen and (max-width: $bp-medium) {
+    flex-direction: column;
+  }
 }
 
 .sidebar {
@@ -28,7 +44,7 @@
 }
 
 .hotel-view {
-  background-color: #fff;
+  background-color: var(--color-white);
   flex: 1; // flex grow allowed to fill up the rest of the width.
 }
 
@@ -38,14 +54,36 @@
   display: flex;
   font-size: 1.4rem;
   padding: 4.5rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 3rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    padding: 1.5rem 1rem 2rem;
+  }
 }
 
 .description {
-  background-color: #fff;
+  background-color: var(--color-white);
   box-shadow: var(--shadow-light);
   flex: 0 0 60%; // no grow or shrink and lets user review adapt to it.
   margin-right: 4.5rem;
   padding: 3rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    margin-right: 3rem;
+    padding: 2rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    margin-bottom: 3rem;
+    margin-right: 0;
+  }
 }
 
 .user-reviews {
@@ -53,4 +91,10 @@
   display: flex;
   flex: 1; // takes up the rest of the space.
   flex-direction: column;
+
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 }
