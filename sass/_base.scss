@@ -24,6 +24,8 @@ $bp-largest: 75em; // 1200px (1200/16).
 $bp-large: 68.75em; // 1100px.
 $bp-medium: 56.25em; // 900px.
 $bp-small: 40em; // 660px.
+$bp-smallest: 33.125em; // 530px.
+$bp-tiny: 25.625em; // 410px.
 
 // NORMALIZATION AND BASIC SETUP
 * {
@@ -39,10 +41,14 @@ $bp-small: 40em; // 660px.
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; // 1 rem = 10px (10/16).
+  font-size: 62.5%; // 1rem = 10px (10/16).
 
   @media only screen and (max-width: $bp-large) {
-    font-size: 50%; // 1 rem = 8px (8/16).
+    font-size: 50%; // 1rem = 8px (8/16).
+  }
+
+  @media only screen and (max-width: $bp-tiny) {
+    font-size: 43.75%; // 1rem = 7px.
   }
 }
 

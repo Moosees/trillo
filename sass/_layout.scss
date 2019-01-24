@@ -19,6 +19,12 @@
   font-size: 1.4rem;
   height: 7rem;
   justify-content: space-between; // all the spece is between the flex items, no space on sides.
+
+  @media only screen and (max-width: $bp-smallest) {
+    align-content: space-around;
+    flex-wrap: wrap;
+    height: 10rem;
+  }
 }
 
 .content {
@@ -55,6 +61,10 @@
 
   @media only screen and (max-width: $bp-small) {
     flex-direction: column;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    padding: 1.5rem 1rem 2rem;
   }
 }
 

@@ -36,6 +36,11 @@ html {
     font-size: 50%;
   }
 }
+@media only screen and (max-width: 25.625em) {
+  html {
+    font-size: 43.75%;
+  }
+}
 
 body {
   background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
@@ -58,6 +63,13 @@ body {
   flex: 0 0 40%;
   justify-content: center;
 }
+@media only screen and (max-width: 33.125em) {
+  .search {
+    background-color: var(--color-grey-light-2);
+    flex: 0 0 100%;
+    order: 1;
+  }
+}
 .search__input {
   background-color: var(--color-grey-light-2);
   border: 0;
@@ -67,13 +79,19 @@ body {
   font-size: inherit;
   margin-right: -3.25rem;
   padding: 0.7rem 2rem;
-  transition: all 0.2s;
+  transition: width 0.2s, background-color 0.2s;
   width: 90%;
 }
 .search__input:focus {
   background-color: var(--color-grey-light-3);
   outline: none;
   width: 100%;
+}
+@media only screen and (max-width: 33.125em) {
+  .search__input:focus {
+    background-color: var(--color-grey-light-2);
+    width: 90%;
+  }
 }
 .search__input::-webkit-input-placeholder {
   color: var(--color-grey-light-4);
@@ -84,7 +102,7 @@ body {
 }
 .search__button {
   background-color: var(--color-grey-light-2);
-  border: none;
+  border: 0;
 }
 .search__button:focus {
   outline: none;
@@ -255,6 +273,11 @@ body {
   position: relative;
   text-transform: uppercase;
 }
+@media only screen and (max-width: 33.125em) {
+  .btn {
+    font-size: 1.2rem;
+  }
+}
 .btn > * {
   display: inline-block;
   height: 100%;
@@ -269,6 +292,11 @@ body {
     padding: 1.5rem 5rem;
   }
 }
+@media only screen and (max-width: 33.125em) {
+  .btn__visible {
+    padding: 1rem 4rem;
+  }
+}
 .btn__invisible {
   left: 0;
   padding: 2rem 0;
@@ -279,6 +307,11 @@ body {
 @media only screen and (max-width: 56.25em) {
   .btn__invisible {
     padding: 1.5rem 0;
+  }
+}
+@media only screen and (max-width: 33.125em) {
+  .btn__invisible {
+    padding: 1rem 0;
   }
 }
 .btn:hover {
@@ -543,6 +576,16 @@ body {
     margin-bottom: 1rem;
   }
 }
+@media only screen and (max-width: 33.125em) {
+  .cta__book-now {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (max-width: 25.625em) {
+  .cta__book-now {
+    font-size: 1.2rem;
+  }
+}
 
 .container {
   background-color: var(--color-grey-light-2);
@@ -566,6 +609,13 @@ body {
   font-size: 1.4rem;
   height: 7rem;
   justify-content: space-between;
+}
+@media only screen and (max-width: 33.125em) {
+  .header {
+    align-content: space-around;
+    flex-wrap: wrap;
+    height: 10rem;
+  }
 }
 
 .content {
@@ -605,6 +655,11 @@ body {
 @media only screen and (max-width: 40em) {
   .detail {
     flex-direction: column;
+  }
+}
+@media only screen and (max-width: 33.125em) {
+  .detail {
+    padding: 1.5rem 1rem 2rem;
   }
 }
 
