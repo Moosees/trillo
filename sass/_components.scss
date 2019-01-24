@@ -148,18 +148,18 @@
     @media only screen and (max-width: $bp-medium) {
       flex: 1;
     }
-  }
 
-  &__item::before {
-    background-color: var(--color-primary);
-    content: '';
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    transform: scaleY(0);
-    transition: transform .2s, width .4s cubic-bezier(1, 0, 0, 1) .2s, background-color .1s; // second value is delay.
-    width: 3px;
+    &::before {
+      background-color: var(--color-primary);
+      content: '';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transform: scaleY(0);
+      transition: transform .2s, width .4s cubic-bezier(1, 0, 0, 1) .2s, background-color .1s; // second value is delay.
+      width: 3px;
+    }
   }
 
   &__item:hover::before,
@@ -448,17 +448,23 @@
     margin-bottom: .7rem;
 
     &::before {
-      -webkit-mask-image: url('../img/chevron-thin-right.svg'); // only shows the background through the mask.
-      -webkit-mask-size: cover;
-      background-color: var(--color-primary);
+      // Older browsers
+      background-image: url('../img/chevron-thin-right.svg');
+      background-size: cover;
+      // All browsers
       content: '';
       display: inline-block;
       height: 1rem;
       margin-right: .7rem;
       width: 1rem;
-      // Older browsers
-      // background-image: url(../img/chevron-thin-right.svg);
-      // background-size: cover;
+
+      // Newer browsers
+      @supports (mask-image: url()) {
+        background-color: var(--color-primary);
+        background-image: none;
+        mask-image: url('../img/chevron-thin-right.svg'); // only shows the background through the mask.
+        mask-size: cover;
+      }
     }
   }
 }
