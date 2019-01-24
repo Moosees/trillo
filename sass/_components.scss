@@ -105,7 +105,7 @@
     align-items: center;
     background-color: var(--color-primary);
     border-radius: 50%;
-    color: #fff;
+    color: var(--color-white);
     display: flex;
     font-size: .8rem;
     height: 1.75rem;
@@ -158,9 +158,7 @@
     position: absolute;
     top: 0;
     transform: scaleY(0);
-    transition: transform .2s,
-      width .4s cubic-bezier(1, 0, 0, 1) .2s,
-      background-color .1s; // second value is delay.
+    transition: transform .2s, width .4s cubic-bezier(1, 0, 0, 1) .2s, background-color .1s; // second value is delay.
     width: 3px;
   }
 
@@ -174,25 +172,28 @@
     background-color: var(--color-primary-light);
   }
 
-  &__link:link,
-  &__link:visited {
-    align-items: center;
-    color: var(--color-grey-light-1);
-    display: flex; // really is flex AND block.
-    padding: 1.5rem 3rem;
-    position: relative; // z-index needs specified position!
-    text-decoration: none;
-    text-transform: uppercase;
-    z-index: 10;
+  &__link {
 
-    @media only screen and (max-width: $bp-medium) {
-      justify-content: center;
-      padding: 2rem;
-    }
+    &:link,
+    &:visited {
+      align-items: center;
+      color: var(--color-grey-light-1);
+      display: flex; // really is flex AND block.
+      padding: 1.5rem 3rem;
+      position: relative; // z-index needs specified position!
+      text-decoration: none;
+      text-transform: uppercase;
+      z-index: 10;
 
-    @media only screen and (max-width: $bp-small) {
-      flex-direction: column;
-      padding: 1.5rem .5rem;
+      @media only screen and (max-width: $bp-medium) {
+        justify-content: center;
+        padding: 2rem;
+      }
+
+      @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+        padding: 1.5rem .5rem;
+      }
     }
   }
 
@@ -238,7 +239,7 @@
   background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
   border: 0;
   border-radius: 100px;
-  color: #fff;
+  color: var(--color-white);
   cursor: pointer;
   font-size: 1.5rem;
   font-weight: 300;
@@ -312,7 +313,7 @@
   display: inline-block;
   font-size: inherit; // allows dynamic resuable font size.
   padding-bottom: 2px;
-  transition: all .2s;
+  transition: color .2s;
 
   & span {
     margin-left: 3px;
@@ -340,7 +341,7 @@
   }
 
   50% {
-    box-shadow: 0 1rem 4rem rgba(0, 0, 0, .25);
+    box-shadow: var(--shadow-medium);
     transform: scale(1.05);
   }
 
@@ -395,7 +396,7 @@
     align-items: center;
     align-self: stretch;
     background-color: var(--color-primary);
-    color: #fff;
+    color: var(--color-white);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -445,20 +446,20 @@
   &__item {
     flex: 0 0 50%;
     margin-bottom: .7rem;
-  }
 
-  &__item::before {
-    -webkit-mask-image: url(../img/chevron-thin-right.svg); // only shows the background through the mask.
-    -webkit-mask-size: cover;
-    background-color: var(--color-primary);
-    content: '';
-    display: inline-block;
-    height: 1rem;
-    margin-right: .7rem;
-    width: 1rem;
-    // Older browsers
-    // background-image: url(../img/chevron-thin-right.svg);
-    // background-size: cover;
+    &::before {
+      -webkit-mask-image: url('../img/chevron-thin-right.svg'); // only shows the background through the mask.
+      -webkit-mask-size: cover;
+      background-color: var(--color-primary);
+      content: '';
+      display: inline-block;
+      height: 1rem;
+      margin-right: .7rem;
+      width: 1rem;
+      // Older browsers
+      // background-image: url(../img/chevron-thin-right.svg);
+      // background-size: cover;
+    }
   }
 }
 
@@ -478,7 +479,7 @@
   }
 
   &__photo {
-    border: 3px solid #fff;
+    border: 3px solid var(--color-white);
     border-radius: 50%;
     box-sizing: content-box; // overrides the base border box default.
     height: 4rem;
@@ -492,7 +493,7 @@
 
 // REVIEWS
 .review {
-  background-color: #fff;
+  background-color: var(--color-white);
   box-shadow: var(--shadow-light);
   margin-bottom: 3rem;
   overflow: hidden;
